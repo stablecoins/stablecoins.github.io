@@ -6,8 +6,8 @@ export default function BenefitsPage() {
     <main className="container mx-auto px-4 py-16">
       <div className="mx-auto max-w-4xl">
         <div className="mb-12 text-center">
-          <h1 className="mb-4 text-4xl font-bold text-purple-900">Benefits of USDG</h1>
-          <p className="text-xl text-gray-600">Discover why USDG is the superior choice for stablecoin users</p>
+          <h1 className="mb-4 text-4xl font-bold text-purple-900">Benefits of USDT</h1>
+          <p className="text-xl text-gray-600">Discover why USDT is the superior choice for stablecoin users</p>
         </div>
 
         <div className="grid gap-8 md:grid-cols-2">
@@ -22,7 +22,7 @@ export default function BenefitsPage() {
             </CardHeader>
             <CardContent>
               <p className="text-gray-600">
-                Unlike USDC, USDG is a decentralized stablecoin owned by the DAO of token holders. This means you have a
+                Unlike USDC, USDT is a decentralized stablecoin owned by the DAO of token holders. This means you have a
                 voice in governance and future development decisions. The community collectively decides on important
                 protocol changes, fee structures, and treasury management.
               </p>
@@ -40,9 +40,9 @@ export default function BenefitsPage() {
             </CardHeader>
             <CardContent>
               <p className="text-gray-600">
-                While USDC is backed by tokenized government bonds, USDG maintains its peg through a diversified and
+                While USDC is backed by tokenized government bonds, USDT maintains its peg through a diversified and
                 transparent reserve system. All reserves are on-chain and can be verified by anyone at any time,
-                ensuring complete transparency and trust in the stability of USDG.
+                ensuring complete transparency and trust in the stability of USDT.
               </p>
             </CardContent>
           </Card>
@@ -58,9 +58,9 @@ export default function BenefitsPage() {
             </CardHeader>
             <CardContent>
               <p className="text-gray-600">
-                USDC offers 0% yield, but USDG provides approximately 3% yield as a STABLE token. This means your assets
+                USDC offers 0% yield, but USDT provides approximately 3% yield as a STABLE token. This means your assets
                 continue to grow while maintaining stability. The yield is generated through a combination of treasury
-                management, protocol fees, and DeFi strategies, all governed by USDG holders.
+                management, protocol fees, and DeFi strategies, all governed by USDT holders.
               </p>
             </CardContent>
           </Card>
@@ -76,7 +76,7 @@ export default function BenefitsPage() {
             </CardHeader>
             <CardContent>
               <p className="text-gray-600">
-                USDG implements advanced security measures and regular audits to ensure the safety of your assets across
+                USDT implements advanced security measures and regular audits to ensure the safety of your assets across
                 all supported networks. The smart contracts have been thoroughly audited by leading security firms, and
                 the protocol includes safety mechanisms to protect against potential vulnerabilities.
               </p>
@@ -93,7 +93,7 @@ export default function BenefitsPage() {
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-green-600">~3%</div>
-              <div className="mt-2 text-lg text-gray-600">USDG Yield</div>
+              <div className="mt-2 text-lg text-gray-600">USDT Yield</div>
             </div>
           </div>
         </div>

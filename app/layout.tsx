@@ -4,8 +4,8 @@ import { ThemeProvider } from "@/components/theme-provider"
 import "@/app/globals.css"
 
 export const metadata = {
-  title: "Stablecoin.org - USDC to USDG Converter",
-  description: "Convert your USDC to USDG at a 1:1 ratio across multiple EVM chains",
+  title: "Stablecoin.org - USDC to USDT Converter",
+  description: "Convert your USDC to USDT at a 1:1 ratio across multiple EVM chains",
     generator: 'v0.app'
 }
 

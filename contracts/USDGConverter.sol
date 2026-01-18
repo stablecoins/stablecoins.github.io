@@ -7,35 +7,35 @@ import "@openzeppelin/contracts/access/AccessControl.sol";
 import "@openzeppelin/contracts/security/Pausable.sol";
 import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
 
-interface IUSDG {
+interface IUSDT {
     function mint(address to, uint256 amount) external;
     function burn(uint256 amount) external;
 }
 
 /**
- * @title USDG Converter
- * @dev Contract for converting USDC to USDG at 1:1 ratio
+ * @title USDT Converter
+ * @dev Contract for converting USDC to USDT at 1:1 ratio
  */
-contract USDGConverter is AccessControl, Pausable, ReentrancyGuard {
+contract USDTConverter is AccessControl, Pausable, ReentrancyGuard {
     using SafeERC20 for IERC20;
 
     bytes32 public constant ADMIN_ROLE = keccak256("ADMIN_ROLE");
     bytes32 public constant PAUSER_ROLE = keccak256("PAUSER_ROLE");
 
-    // USDG token contract
-    IUSDG public usdg;
+    // USDT token contract
+    IUSDT public USDT;
 
     // Mapping of supported USDC tokens on different chains
     mapping(uint256 => address) public usdcTokens;
     
     // Events
-    event ConvertedToUSDG(address indexed user, uint256 amount);
-    event ConvertedFromUSDG(address indexed user, uint256 amount);
+    event ConvertedToUSDT(address indexed user, uint256 amount);
+    event ConvertedFromUSDT(address indexed user, uint256 amount);
     event TokenAdded(uint256 indexed chainId, address tokenAddress);
     event TokenRemoved(uint256 indexed chainId);
 
-    constructor(address _usdgAddress) {
-        usdg = IUSDG(_usdgAddress);
+    constructor(address _USDTAddress) {
+        USDT = IUSDT(_USDTAddress);
         
         _grantRole(DEFAULT_ADMIN_ROLE, msg.sender);
         _grantRole(ADMIN_ROLE, msg.sender);
@@ -64,10 +64,10 @@ contract USDGConverter is AccessControl, Pausable, ReentrancyGuard {
     }
 
     /**
-     * @dev Convert USDC to USDG at 1:1 ratio
+     * @dev Convert USDC to USDT at 1:1 ratio
      * @param amount The amount to convert
      */
-    function convertToUSDG(uint256 amount) external nonReentrant whenNotPaused {
+    function convertToUSDT(uint256 amount) external nonReentrant whenNotPaused {
         require(amount > 0, "Amount must be greater than 0");
         
         // Get the USDC token for the current chain
@@ -77,17 +77,17 @@ contract USDGConverter is AccessControl, Pausable, ReentrancyGuard {
         // Transfer USDC from user to this contract
         IERC20(usdcToken).safeTransferFrom(msg.sender, address(this), amount);
         
-        // Mint equivalent USDG to the user
-        usdg.mint(msg.sender, amount);
+        // Mint equivalent USDT to the user
+        USDT.mint(msg.sender, amount);
         
-        emit ConvertedToUSDG(msg.sender, amount);
+        emit ConvertedToUSDT(msg.sender, amount);
     }
 
     /**
-     * @dev Convert USDG back to USDC at 1:1 ratio
+     * @dev Convert USDT back to USDC at 1:1 ratio
      * @param amount The amount to convert
      */
-    function convertFromUSDG(uint256 amount) external nonReentrant whenNotPaused {
+    function convertFromUSDT(uint256 amount) external nonReentrant whenNotPaused {
         require(amount > 0, "Amount must be greater than 0");
         
         // Get the USDC token for the current chain
@@ -97,13 +97,13 @@ contract USDGConverter is AccessControl, Pausable, ReentrancyGuard {
         // Check if contract has enough USDC
         require(IERC20(usdcToken).balanceOf(address(this)) >= amount, "Insufficient USDC reserves");
         
-        // Burn USDG from user
-        usdg.burn(amount);
+        // Burn USDT from user
+        USDT.burn(amount);
         
         // Transfer USDC to user
         IERC20(usdcToken).safeTransfer(msg.sender, amount);
         
-        emit ConvertedFromUSDG(msg.sender, amount);
+        emit ConvertedFromUSDT(msg.sender, amount);
     }
 
     /**

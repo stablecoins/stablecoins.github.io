@@ -65,7 +65,7 @@ export function Converter() {
       <div className="mx-auto max-w-3xl">
         <h2 className="mb-8 text-center text-3xl font-bold text-purple-900">Swap across multiple blockchains</h2>
         <p className="mb-12 text-center text-lg text-gray-600">
-          Convert your USDC from any supported EVM chain to USDG at a 1:1 ratio
+          Convert your USDC from any supported EVM chain to USDT at a 1:1 ratio
         </p>
 
         <Tabs defaultValue="swap" className="mx-auto max-w-xl">
@@ -77,7 +77,7 @@ export function Converter() {
           <TabsContent value="swap">
             <Card>
               <CardHeader>
-                <CardTitle>Convert USDC to USDG</CardTitle>
+                <CardTitle>Convert USDC to USDT</CardTitle>
                 <CardDescription>Select network and enter amount to convert</CardDescription>
               </CardHeader>
               <CardContent className="space-y-6">
@@ -142,7 +142,7 @@ export function Converter() {
                       <div className="flex h-8 w-8 items-center justify-center rounded-full bg-purple-900 text-white">
                         G
                       </div>
-                      <span className="font-medium">USDG</span>
+                      <span className="font-medium">USDT</span>
                     </div>
                     <div className="text-right">
                       <div className="text-lg font-bold">{amount || "0.00"}</div>
@@ -154,7 +154,7 @@ export function Converter() {
                 <div className="rounded-lg border border-gray-200 bg-gray-50 p-4">
                   <div className="flex items-center justify-between">
                     <div className="text-sm font-medium text-gray-500">Exchange Rate</div>
-                    <div className="text-sm">1 USDC = 1 USDG</div>
+                    <div className="text-sm">1 USDC = 1 USDT</div>
                   </div>
                 </div>
               </CardContent>
@@ -171,7 +171,7 @@ export function Converter() {
                       Converting...
                     </>
                   ) : (
-                    "Convert to USDG"
+                    "Convert to USDT"
                   )}
                 </Button>
               </CardFooter>
@@ -193,8 +193,8 @@ export function Converter() {
           <TabsContent value="benefits">
             <Card>
               <CardHeader>
-                <CardTitle>Why Choose USDG?</CardTitle>
-                <CardDescription>Discover the advantages of USDG over traditional stablecoins</CardDescription>
+                <CardTitle>Why Choose USDT?</CardTitle>
+                <CardDescription>Discover the advantages of USDT over traditional stablecoins</CardDescription>
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="grid gap-6 md:grid-cols-2">
@@ -206,7 +206,7 @@ export function Converter() {
                       Community Owned
                     </h3>
                     <p className="text-gray-600">
-                      Unlike USDC, USDG is a decentralized stablecoin owned by the DAO of token holders, giving you a
+                      Unlike USDC, USDT is a decentralized stablecoin owned by the DAO of token holders, giving you a
                       voice in governance and future development.
                     </p>
                   </div>
@@ -219,7 +219,7 @@ export function Converter() {
                       Transparent Backing
                     </h3>
                     <p className="text-gray-600">
-                      While USDC is backed by tokenized government bonds, USDG maintains its peg through a diversified
+                      While USDC is backed by tokenized government bonds, USDT maintains its peg through a diversified
                       and transparent reserve system.
                     </p>
                   </div>
@@ -232,7 +232,7 @@ export function Converter() {
                       Competitive Yield
                     </h3>
                     <p className="text-gray-600">
-                      USDC offers 0% yield, but USDG provides approximately 3% yield as a STABLE token, allowing your
+                      USDC offers 0% yield, but USDT provides approximately 3% yield as a STABLE token, allowing your
                       assets to grow while maintaining stability.
                     </p>
                   </div>
@@ -245,7 +245,7 @@ export function Converter() {
                       Enhanced Security
                     </h3>
                     <p className="text-gray-600">
-                      USDG implements advanced security measures and regular audits to ensure the safety of your assets
+                      USDT implements advanced security measures and regular audits to ensure the safety of your assets
                       across all supported networks.
                     </p>
                   </div>
@@ -260,22 +260,22 @@ export function Converter() {
                     </div>
                     <div className="text-center">
                       <div className="text-2xl font-bold text-green-600">~3%</div>
-                      <div className="text-sm text-gray-500">USDG Yield</div>
+                      <div className="text-sm text-gray-500">USDT Yield</div>
                     </div>
                   </div>
                 </div>
 
                 <div className="rounded-lg border border-gray-200 bg-white p-4">
-                  <h3 className="mb-2 text-center font-semibold text-purple-900">How USDG Generates Yield</h3>
+                  <h3 className="mb-2 text-center font-semibold text-purple-900">How USDT Generates Yield</h3>
                   <p className="text-center text-gray-600">
-                    USDG generates yield through a combination of treasury management, protocol fees, and DeFi
-                    strategies, all governed by USDG holders through the DAO.
+                    USDT generates yield through a combination of treasury management, protocol fees, and DeFi
+                    strategies, all governed by USDT holders through the DAO.
                   </p>
                 </div>
               </CardContent>
               <CardFooter className="flex justify-center">
                 <Button className="bg-purple-900 hover:bg-purple-800" size="lg">
-                  Convert to USDG
+                  Convert to USDT
                 </Button>
               </CardFooter>
             </Card>

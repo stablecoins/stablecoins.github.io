@@ -21,7 +21,7 @@ export default function ComparisonPage() {
       color: "border-blue-200 bg-blue-50",
     },
     {
-      name: "USDG",
+      name: "USDT",
       issuer: "DAO",
       yield: "Stable gov token (~3%)",
       underlying: "Tokenized Government Bond",
@@ -36,7 +36,7 @@ export default function ComparisonPage() {
       <div className="mx-auto max-w-6xl">
         <div className="mb-12 text-center">
           <h1 className="mb-4 text-4xl font-bold text-purple-900">Stablecoin Comparison</h1>
-          <p className="text-xl text-gray-600">See how USDG compares to other popular stablecoins</p>
+          <p className="text-xl text-gray-600">See how USDT compares to other popular stablecoins</p>
         </div>
 
         <Card>
@@ -96,7 +96,7 @@ export default function ComparisonPage() {
                     <span className="mt-0.5 text-gray-700 font-semibold">Restrictions/Notes:</span>
                     <span className="text-gray-600">{coin.restriction || "None"}</span>
                   </li>
-                  {coin.name === "USDG" && (
+                  {coin.name === "USDT" && (
                     <li className="mt-4 flex items-center justify-center">
                       <span className="inline-flex items-center rounded-full bg-green-100 px-3 py-1 text-sm font-medium text-green-800">
                         <CheckCircle className="mr-1 h-4 w-4" /> Recommended
@@ -117,7 +117,7 @@ export default function ComparisonPage() {
         </div>
 
         <div className="mt-12 rounded-lg border bg-purple-50 p-8">
-          <h2 className="mb-6 text-center text-2xl font-bold text-purple-900">Why Choose USDG?</h2>
+          <h2 className="mb-6 text-center text-2xl font-bold text-purple-900">Why Choose USDT?</h2>
           <div className="grid gap-6 md:grid-cols-3">
             <div className="rounded-lg bg-white p-4 text-center shadow-sm">
               <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-purple-100">

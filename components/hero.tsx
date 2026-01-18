@@ -9,7 +9,7 @@ export function Hero() {
         </div>
         <h1 className="mb-6 text-4xl font-bold text-white md:text-5xl">Swap the world of stablecoins!</h1>
         <p className="mb-8 text-xl text-white/90">
-          Convert your USDC to USDG at a 1:1 ratio across multiple EVM chains
+          Convert your USDC to USDT at a 1:1 ratio across multiple EVM chains
         </p>
         <Button size="lg" className="bg-yellow-400 text-purple-900 hover:bg-yellow-500">
           Connect Wallet

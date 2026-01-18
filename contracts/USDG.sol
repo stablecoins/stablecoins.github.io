@@ -9,11 +9,11 @@ import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 import "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol";
 
 /**
- * @title USDG Token
- * @dev Implementation of the USDG stablecoin
+ * @title USDT Token
+ * @dev Implementation of the USDT stablecoin
  * Based on the USDC proxy pattern with upgradeable contracts
  */
-contract USDG is Initializable, ERC20Upgradeable, ERC20BurnableUpgradeable, ERC20PausableUpgradeable, AccessControlUpgradeable, UUPSUpgradeable {
+contract USDT is Initializable, ERC20Upgradeable, ERC20BurnableUpgradeable, ERC20PausableUpgradeable, AccessControlUpgradeable, UUPSUpgradeable {
     bytes32 public constant PAUSER_ROLE = keccak256("PAUSER_ROLE");
     bytes32 public constant MINTER_ROLE = keccak256("MINTER_ROLE");
     bytes32 public constant UPGRADER_ROLE = keccak256("UPGRADER_ROLE");
@@ -27,7 +27,7 @@ contract USDG is Initializable, ERC20Upgradeable, ERC20BurnableUpgradeable, ERC2
     }
 
     function initialize(address defaultAdmin) initializer public {
-        __ERC20_init("USD Global", "USDG");
+        __ERC20_init("USD Global", "USDT");
         __ERC20Burnable_init();
         __ERC20Pausable_init();
         __AccessControl_init();
@@ -41,7 +41,7 @@ contract USDG is Initializable, ERC20Upgradeable, ERC20BurnableUpgradeable, ERC2
     }
 
     function mint(address to, uint256 amount) public onlyRole(MINTER_ROLE) {
-        require(!blacklisted[to], "USDG: recipient is blacklisted");
+        require(!blacklisted[to], "USDT: recipient is blacklisted");
         _mint(to, amount);
     }
 
@@ -65,7 +65,7 @@ contract USDG is Initializable, ERC20Upgradeable, ERC20BurnableUpgradeable, ERC2
         internal
         override(ERC20Upgradeable, ERC20PausableUpgradeable)
     {
-        require(!blacklisted[from] && !blacklisted[to], "USDG: blacklisted address");
+        require(!blacklisted[from] && !blacklisted[to], "USDT: blacklisted address");
         super._beforeTokenTransfer(from, to, amount);
     }
 
