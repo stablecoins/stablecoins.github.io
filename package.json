@@ -8,7 +8,7 @@
     "lint": "eslint .",
     "start": "next start",
     "serve": "cd out && python3 -m http.server 8000",
-    "deploy": "next build && gh-pages -d out"
+    "deploy": "next build && cp -r out/* . && git add -A && git commit -m 'Deploy to GitHub Pages' && git push origin master"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
