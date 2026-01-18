@@ -65,7 +65,7 @@ export function Converter() {
       <div className="mx-auto max-w-3xl">
         <h2 className="mb-8 text-center text-3xl font-bold text-purple-900">Swap across multiple blockchains</h2>
         <p className="mb-12 text-center text-lg text-gray-600">
-          Convert your USDC from any supported EVM chain to USDT at a 1:1 ratio
+          Convert your USDC or USDT stablecoins across multiple chains
         </p>
 
         <Tabs defaultValue="swap" className="mx-auto max-w-xl">

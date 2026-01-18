@@ -5,7 +5,7 @@ import "@/app/globals.css"
 
 export const metadata = {
   title: "Stablecoin.org - USDC to USDT Converter",
-  description: "Convert your USDC to USDT at a 1:1 ratio across multiple EVM chains",
+  description: "Convert your USDC or USDT stablecoins across multiple chains",
     generator: 'v0.app'
 }
 

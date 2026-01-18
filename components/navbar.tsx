@@ -19,18 +19,6 @@ export function Navbar() {
             >
               Home
             </Link>
-            <Link
-              href="/benefits"
-              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
-            >
-              Benefits
-            </Link>
-            <Link
-              href="/comparison"
-              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
-            >
-              Comparison
-            </Link>
           </nav>
         </div>
         <div className="flex items-center gap-4">
