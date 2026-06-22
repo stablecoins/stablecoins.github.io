@@ -10,7 +10,7 @@ export function Navbar() {
             <div className="relative flex h-8 w-8 items-center justify-center rounded-full bg-purple-900 text-white">
               <span className="text-lg font-bold">S</span>
             </div>
-            <span className="text-xl font-bold text-purple-900">stablecoin.org</span>
+            <span className="text-xl font-bold text-purple-900">stablecoins.org</span>
           </Link>
           <nav className="hidden md:flex items-center gap-6">
             <Link

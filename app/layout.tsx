@@ -4,7 +4,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 import "@/app/globals.css"
 
 export const metadata = {
-  title: "Stablecoin.org - USDC to USDT Converter",
+  title: "Stablecoins.org - USDC to USDT Converter",
   description: "Convert your USDC or USDT stablecoins across multiple chains",
     generator: 'v0.app'
 }
