@@ -22,12 +22,14 @@ export function Navbar() {
           </nav>
         </div>
         <div className="flex items-center gap-4">
+          {/* Hidden (not deleted)
           <Button variant="outline" size="sm" className="hidden md:flex">
             Connect Wallet
           </Button>
           <Button size="sm" className="bg-purple-900 hover:bg-purple-800">
             Get Started
           </Button>
+          */}
         </div>
       </div>
     </header>

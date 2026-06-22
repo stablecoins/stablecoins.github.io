@@ -11,9 +11,11 @@ export function Hero() {
         <p className="mb-8 text-xl text-white/90">
           Convert your USDC or USDT stablecoins across multiple chains
         </p>
+        {/* Hidden (not deleted)
         <Button size="lg" className="bg-yellow-400 text-purple-900 hover:bg-yellow-500">
           Connect Wallet
         </Button>
+        */}
       </div>
     </div>
   )
