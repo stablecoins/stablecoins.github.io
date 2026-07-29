@@ -34,3 +34,10 @@ Deploys the static export to GitHub Pages:
 ```bash
 npm run deploy
 ```
+
+## Periodic checks
+
+- `npm run check:outdated` — version freshness
+- `npm run check:unused` — unused/missing dependency scan (via depcheck)
+- `npm run check:audit` — security vulnerabilities in dependencies
+- `npm run check:deps` — runs all three
