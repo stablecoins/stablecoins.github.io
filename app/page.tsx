@@ -1,6 +1,6 @@
 import { Hero } from "@/components/hero"
-import { Github, Linkedin, Mail } from "lucide-react"
-import { CrunchbaseIcon } from "@/components/crunchbase-icon"
+import { CiLinkedin, CiMail } from "react-icons/ci"
+import { SiBluesky, SiCrunchbase, SiGithub } from "react-icons/si"
 
 export default function Home() {
   return (
@@ -26,7 +26,7 @@ export default function Home() {
             aria-label="GitHub"
             className="text-purple-900 transition-colors hover:text-purple-600"
           >
-            <Github className="h-6 w-6" />
+            <SiGithub className="h-6 w-6" />
           </a>
           <a
             href="https://www.linkedin.com/company/stablecoin"
@@ -35,14 +35,14 @@ export default function Home() {
             aria-label="LinkedIn"
             className="text-purple-900 transition-colors hover:text-purple-600"
           >
-            <Linkedin className="h-6 w-6" />
+            <CiLinkedin className="h-6 w-6" />
           </a>
           <a
             href="mailto:email@stablecoins.org"
             aria-label="Email"
             className="text-purple-900 transition-colors hover:text-purple-600"
           >
-            <Mail className="h-6 w-6" />
+            <CiMail className="h-6 w-6" />
           </a>
           <a
             href="https://www.crunchbase.com/organization/stablecoins"
@@ -51,7 +51,16 @@ export default function Home() {
             aria-label="Crunchbase"
             className="text-purple-900 transition-colors hover:text-purple-600"
           >
-            <CrunchbaseIcon className="h-6 w-6" />
+            <SiCrunchbase className="h-6 w-6" />
+          </a>
+          <a
+            href="https://bsky.app/profile/stablecoins.org"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Bluesky"
+            className="text-purple-900 transition-colors hover:text-purple-600"
+          >
+            <SiBluesky className="h-6 w-6" aria-hidden="true" />
           </a>
         </div>
       </footer>
