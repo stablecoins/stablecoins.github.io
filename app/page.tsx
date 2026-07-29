@@ -1,5 +1,6 @@
 import { Hero } from "@/components/hero"
 import { Github, Linkedin, Mail } from "lucide-react"
+import { CrunchbaseIcon } from "@/components/crunchbase-icon"
 
 export default function Home() {
   return (
@@ -42,6 +43,15 @@ export default function Home() {
             className="text-purple-900 transition-colors hover:text-purple-600"
           >
             <Mail className="h-6 w-6" />
+          </a>
+          <a
+            href="https://www.crunchbase.com/organization/stablecoins"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Crunchbase"
+            className="text-purple-900 transition-colors hover:text-purple-600"
+          >
+            <CrunchbaseIcon className="h-6 w-6" />
           </a>
         </div>
       </footer>
