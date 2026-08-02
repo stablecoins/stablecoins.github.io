@@ -41,3 +41,7 @@ npm run deploy
 - `npm run check:unused` — unused/missing dependency scan (via depcheck)
 - `npm run check:audit` — security vulnerabilities in dependencies
 - `npm run check:deps` — runs all three
+
+## Site URL
+
+Base URL: https://stablecoins.org
