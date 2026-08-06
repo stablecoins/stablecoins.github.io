@@ -22,6 +22,8 @@ const actionTypes = {
   REMOVE_TOAST: 'REMOVE_TOAST',
 } as const
 
+const _actionTypes = actionTypes
+
 let count = 0
 
 function genId() {
@@ -29,7 +31,7 @@ function genId() {
   return count.toString()
 }
 
-type ActionType = typeof actionTypes
+type ActionType = typeof _actionTypes
 
 type Action =
   | {

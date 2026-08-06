@@ -1,5 +1,3 @@
-import { Button } from "@/components/ui/button"
-
 export function Hero() {
   return (
     <div className="relative w-full overflow-hidden bg-gradient-to-r from-pink-400 via-orange-300 to-yellow-300">
